@@ -1,21 +1,22 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Proyecto.Domain.Entities;
+using ControlDeInventario.Domain.Entities;
+using ControlDelInventario.Domain.Entities;
 
-namespace Proyecto.Infrastructure
+namespace ControlDeInventario.Infrastructure
 {
-    public class AppDbContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-        {
-        }
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
 
-        public DbSet<Producto> Productos { get; set; }
         public DbSet<Categoria> Categorias { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Producto> Productos { get; set; }
         public DbSet<Proveedor> Proveedores { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configuraciones adicionales del modelo (fluent API)
+            base.OnModelCreating(modelBuilder);
+            // Agregar configuraciones adicionales aquí si es necesario
         }
     }
 }

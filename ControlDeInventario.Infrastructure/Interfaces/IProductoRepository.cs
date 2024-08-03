@@ -1,7 +1,10 @@
 using ControlDeInventario.Domain.Interfaces;
+using ControlDeInventario.Infrastructure;
 using ControlDelInventario.Domain.Entities;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace ControlDeInventario.Infrastructure.Repositories
+namespace ControlDelInventario.Infrastructure.Repositories
 {
     public class ProductoRepository : IProductoRepository
     {
@@ -12,14 +15,14 @@ namespace ControlDeInventario.Infrastructure.Repositories
             _context = context;
         }
 
-        public IEnumerable<Producto> GetAll()
-        {
-            return _context.Productos.ToList();
-        }
-
         public Producto GetById(int id)
         {
             return _context.Productos.Find(id);
+        }
+
+        public IEnumerable<Producto> GetAll()
+        {
+            return _context.Productos.ToList();
         }
 
         public void Add(Producto producto)
@@ -36,7 +39,7 @@ namespace ControlDeInventario.Infrastructure.Repositories
 
         public void Delete(int id)
         {
-            var producto = _context.Productos.Find(id);
+            var producto = _context.Productos.FirstOrDefault(p => p.Id == id);
             if (producto != null)
             {
                 _context.Productos.Remove(producto);
