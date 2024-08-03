@@ -6,16 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v7.0": {
-      "ControlDeInventario.Api/1.0.0": {
+      "proyecto.Api/1.0.0": {
         "dependencies": {
-          "ControlDeInventario.Domain": "1.0.0",
-          "ControlDeInventario.Utils": "1.0.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
           "Microsoft.AspNetCore.OpenApi": "7.0.11",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
         "runtime": {
-          "ControlDeInventario.Api.dll": {}
+          "proyecto.Api.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/2.2.0": {
@@ -1402,21 +1400,11 @@
           "System.Xml.XDocument": "4.3.0",
           "System.Xml.XPath": "4.3.0"
         }
-      },
-      "ControlDeInventario.Domain/1.0.0": {
-        "runtime": {
-          "ControlDeInventario.Domain.dll": {}
-        }
-      },
-      "ControlDeInventario.Utils/1.0.0": {
-        "runtime": {
-          "ControlDeInventario.Utils.dll": {}
-        }
       }
     }
   },
   "libraries": {
-    "ControlDeInventario.Api/1.0.0": {
+    "proyecto.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -2603,16 +2591,6 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
-    },
-    "ControlDeInventario.Domain/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "ControlDeInventario.Utils/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }
